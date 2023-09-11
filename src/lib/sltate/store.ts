@@ -16,7 +16,7 @@ class Store<T> implements StoreObserverInterface<T> {
   }
 
   // 변경된 상태 적용
-  setState(param: SetStateCallbackType<T> | T) {
+  setState = (param: SetStateCallbackType<T> | T) => {
     if (param instanceof Function) {
       this.state = param(this.state);
     } else {
@@ -24,26 +24,26 @@ class Store<T> implements StoreObserverInterface<T> {
     }
 
     this.emitChange();
-  }
+  };
 
-  getState() {
+  getState = () => {
     return this.state;
-  }
+  };
 
-  subscribe(listener: () => void) {
+  subscribe = (listener: () => void) => {
     this.listeners = [...this.listeners, listener];
 
     return () => {
       this.listeners = this.listeners.filter((l) => l !== listener);
     };
-  }
+  };
 
   // 구독하고있는 모든 컴포넌트가 상태가 변경된채로 다 재호출
-  emitChange() {
+  emitChange = () => {
     for (const listeners of this.listeners) {
       listeners();
     }
-  }
+  };
 }
 
 export default Store;
