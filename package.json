@@ -1,0 +1,30 @@
+{
+  "name": "react-sltate",
+  "version": "0.0.2",
+  "description": "global state management sltate",
+  "main": "index.js",
+  "keywords": [
+    "react-sltate",
+    "sltate",
+    "state management"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dladncks1217/react-sltate.git"
+  },
+  "scripts": {
+    "publish:npm": "rm -rf dist && mkdir dist && tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "typescript": "^5.2.2"
+  },
+  "bugs": {
+    "url": "https://github.com/dladncks1217/react-sltate.git"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
