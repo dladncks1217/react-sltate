@@ -1,1 +1,6 @@
-export { useSltateState, useSetSltateValue, useSltateValue } from "./methods";
+export {
+  useSltateState,
+  useSetSltateValue,
+  useSltateValue,
+  SltateStore,
+} from "./methods";

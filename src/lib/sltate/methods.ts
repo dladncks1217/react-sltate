@@ -1,7 +1,7 @@
 import { useSyncExternalStore } from "react";
 import Store from "./store";
 
-import { StoreObserverInterface, SetStateCallbackType } from "./store";
+import { StoreObserverInterface } from "./store";
 
 export const SltateStore = <T>(initialState: T) => {
   const storeManager = new Store<T>(initialState);
